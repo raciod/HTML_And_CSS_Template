@@ -27,28 +27,25 @@ body {
     padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-}
-
-/*small*/
-@media (min-width:768px ) {
-    .container{
-        width: 750px;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
     }
-}
-
-/*medium*/
-@media (min-width:792px ) {
-    .container{
-        width: 970px;
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
     }
-}
-
-/*large*/ 
-@media (min-width:1200px ) {
-    .container{
-        width: 1170px;
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
     }
-}
+  }
 
 ul {
     list-style-type: none;
@@ -647,3 +644,272 @@ header nav .form i {
     font-size: 14px;
 }
 /*End Stats*/
+/*Start skills*/
+.skills {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.skills .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media (min-width:992px) {
+    .skills .container > div{
+        flex-basis: 45%;
+    }    
+}
+
+.skills .container > div > h2 {
+    margin: 0 0 30px;
+    text-align: center;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.skills .container > div > p {
+    color: #777;
+    line-height: 1.8;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.skills .content {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.skills .content img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 50px;
+}
+
+@media (max-width:767px) {
+    .skills .content {
+        flex-direction: column;
+        text-align: center;
+        
+    }
+    
+    .skills .content img{
+        margin: 0 auto 30px;
+    }
+}
+
+.skills .testimonials .text {
+    line-height: 1.8;
+    border-bottom: 1px solid #ccc;
+}
+
+.skills .testimonials .text p{
+    color: #777;
+    text-align: right;
+    font-size: 14px;
+    margin-bottom: 20px;    
+} 
+
+.skills .testimonials .buletts {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.skills .testimonials .buletts li {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    margin-right: 10px;
+    list-style: none;
+}
+
+.skills .testimonials .buletts li.active {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+.our-skills .prog-holder {
+    margin-bottom: 40px;
+}
+
+.our-skills  .prog-holder h4 {
+    margin-bottom: 15px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.our-skills  .prog-holder .prog {
+    background-color: #dedadc;
+    height: 30px;
+}
+
+.our-skills .prog-holder .prog span {
+    display: block;
+    background-color: var(--main-color);
+    height: 100%;
+    position: relative;
+}
+
+.our-skills .prog-holder .prog span::before {
+    content: attr(data-progress);
+    position: absolute;
+    background-color: black;
+    color: white;
+    top: -40px;
+    right: -22px;
+    width: 40px;
+    padding: 4px 2px;
+    text-align: center;
+    border-radius: 4px;
+
+}
+
+.our-skills .prog-holder .prog span::after {
+    content: "";
+    position: absolute;
+    right: -10px;
+    top: -13px;
+    border-top: 10px solid #000;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+}
+/*End skills*/
+/*Start quote*/
+.quote{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-image: url(../images/quote.jpg);
+    background-size:cover;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.quote::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0/ 75%);
+}
+
+.quote .container{
+    position: relative;
+}
+
+.quote .container q {
+    font-size: 30px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.quote .container q::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f10e";
+    font-weight: 700;
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+
+.quote .container q::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f10d";
+    font-weight: 700;
+    padding-right: 10px;
+}
+
+/*End quote*/
+
+/* Start Pricing */
+.pricing {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+  }
+  .pricing .plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  .pricing .plans .plan {
+    background-color: #fcfcfc;
+    text-align: center;
+      max-width: 100%;
+  }
+  .pricing .plans .plan .head {
+    padding: 40px 20px;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+  }
+  .pricing .plans .plan .head h3 {
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  .pricing .plans .plan .head span {
+    font-size: 60px;
+    font-weight: bold;
+  }
+  .pricing .plans .plan .head span::before {
+    content: "$";
+    font-size: 25px;
+    position: relative;
+    top: -40px;
+    margin-right: 15px;
+    font-weight: normal;
+  }
+  .pricing .plans .plan .head span::after {
+    content: "/Mo";
+    font-size: 20px;
+    position: relative;
+    right: -15px;
+  }
+  .pricing .plans .plan ul {
+    border-bottom: 1px solid var(--main-color);
+  }
+  .pricing .plans .plan ul li {
+    padding: 20px;
+    position: relative;
+  }
+  .pricing .plans .plan ul li:not(:last-child)::after {
+    content: "";
+    width: 140px;
+    height: 1px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+  }
+  .pricing .plans .plan .foot a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    border: 1px solid var(--main-color);
+    width: fit-content;
+    margin: 30px auto;
+  }
+  .pricing .contact-text {
+    text-align: center;
+    margin: 50px auto 20px;
+    font-size: 20px;
+  }
+  .pricing .contact-link {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    background-color: var(--main-color);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+  }
+  /* End Pricing */
